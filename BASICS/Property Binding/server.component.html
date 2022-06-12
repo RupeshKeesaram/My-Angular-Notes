@@ -1,5 +1,12 @@
 <button class="btn btn-primary m-5 p-2" [disabled]="!allowNewServer">Allow Server</button>
+
+<!-- Printing value with the help of string interpolation -->
 {{allowNewServer}}
+
+
+<!-- Achieving String interpolation with the help of property binding -->
+<span [innerText]="allowNewServer"></span>
+
 
 <!-- AllowNewServer is a property that we have mentioned in server.component.ts file -->
 <!-- We will be using [] for property binding -->
