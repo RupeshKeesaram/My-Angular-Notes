@@ -11,6 +11,8 @@ export class ServerComponent implements OnInit {
 
   serverCreation:String="Server was not created !";
 
+  serverName="";
+
   constructor() {
 
     // The Serer button will get disabled after 2000 milliseconds
@@ -23,7 +25,14 @@ export class ServerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // method for onCreateServer
   onCreateServer():void{
     this.serverCreation="Server Got Created!";
+  }
+
+
+  // method for onReceiveData
+  onReceiveData(event:Event){
+    this.serverName=(<HTMLInputElement>event.target).value;
   }
 }
