@@ -1,0 +1,10 @@
+<!-- Two way data binding -->
+<div class="container mt-3">
+    <label for="name">Server Name</label>
+    <input type="text" class="form-control" id="name" style="width:300px;" [(ngModel)]="userName">
+
+    <!-- Add Button  -->
+    <button class="btn btn-primary" (click)="onReset()" [disabled]="check()">Add Server</button>
+
+    <p>{{userName}}</p>
+</div>
