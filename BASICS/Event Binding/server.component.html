@@ -1,5 +1,15 @@
+<!-- () are used for event binding -->
+<!-- Some of the examples of event binding are click event, submit event and etc -->
+
 <button class="btn btn-primary m-5 p-2" [disabled]="!allowNewServer"  (click)="onCreateServer()">Allow Server</button>
 
 {{serverCreation}}
-<!-- () are used for event binding -->
-<!-- Some of the examples of event binding are click event, submit event and etc -->
+
+
+<p>Passing & Using Data With Event Binding</p>
+
+<!-- $event is used to send binded data with the event methods -->
+<label for="name">ServerName : </label>
+<input type="text" id="name" (input)="onReceiveData($event)">
+
+<p>Dynamic Data : {{serverName}}</p>
