@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'ANGULAR_WORKOUT';
+
+  age:number= 22;
+  name:String ="Rupesh";
+}
