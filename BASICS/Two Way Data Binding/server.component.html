@@ -1,0 +1,11 @@
+<!-- Two way data binding -->
+<div class="container mt-3">
+    <label for="name">Server Name</label>
+    <input type="text" class="form-control" id="name" style="width:300px;" [(ngModel)]="serverName">
+
+    <!-- Add Button  -->
+    <button class="btn btn-primary"(click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
+
+    {{serverCreation}}
+    <p>{{serverName}}</p>
+</div>
