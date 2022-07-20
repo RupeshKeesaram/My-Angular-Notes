@@ -1,0 +1,12 @@
+<div class="container">
+    <button (click)="toggle()" class="btn btn-primary my-5">TOGGLE BUTTON</button>
+
+    <p *ngIf="display">Toggle Text</p>
+
+    <ul *ngFor="let click of clicks">
+        <li [ngStyle]="{backgroundColor:click>=5?'blue':'transferent'}" 
+            [ngClass]="{whiteText:click<=5}">
+            {{click}}
+        </li>
+    </ul>
+</div>
