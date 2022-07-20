@@ -1,0 +1,14 @@
+<!-- Two way data binding -->
+<div class="container mt-3">
+    <label for="name">Server Name</label>
+    <input type="text" class="form-control" id="name" style="width:300px;" [(ngModel)]="userName">
+
+    <!-- Add Button  -->
+    <button class="btn btn-primary" (click)="onReset()" [disabled]="check()">Add Server</button>
+
+    <!-- for ... of iterates over values of an object while for ... in iterates over properties in an object. -->
+    
+    <ul *ngFor="let server of servers">
+        <li>{{server}}</li>
+    </ul>
+</div>
