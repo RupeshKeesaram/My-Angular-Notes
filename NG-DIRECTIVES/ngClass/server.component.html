@@ -1,0 +1,24 @@
+<!-- Two way data binding -->
+<div class="container mt-3">
+    <label for="name">Server Name</label>
+    <input type="text" class="form-control" id="name" style="width:300px;" [(ngModel)]="userName">
+
+    <!-- Add Button  -->
+    <button class="btn btn-primary" (click)="onReset()" [disabled]="check()">Add Server</button>
+
+
+    <!-- example for ngIf directive -->
+    <!-- Added ngStyle property  -->
+    <p *ngIf="display; else elseCondition" [ngStyle]="{color: getColor()}">Server Got created with name {{userName}}</p>
+
+    <!-- #elseCondition is nothing but like a local reference -->
+    <ng-template #elseCondition>
+    <!-- Added ngStyle property  -->
+        <p [ngStyle]="{color: getColor()}">No server was created</p>
+    </ng-template>
+
+    <!-- ngClass is same as classList in js, where we can dynamically add styles to the element -->
+    <!-- online is a style class that isalready defined in server.component.css   -->
+    <p [ngClass]="{online: display===true}">Adding style using ngClass</p>
+
+</div>
